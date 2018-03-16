@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weatherly</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/weather-icons-master/css/weather-icons-wind.css">
+  <link rel="stylesheet" href="assets/css/weather-icons-master/css/weather-icons.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="address">&nbsp;</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+
+      <div>
+      </div>
+      <div class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2 search" type="search" placeholder="Enter Address" aria-label="Search">
+        <button class="btn btn-outline-primary my-2 my-sm-0 search-btn" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="loader">
+    <i class="fas fa-cog fa-spin"></i>
+  </div>
+
+
+  <main>
+    <div class="card-grid">
+      <div class="card main-card ">
+        <div class="card-header" id="card-0-date">&nbsp;</div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="icon-wrapper">
+              <i id="card-0-icon" class="wi wi-day-sunny icon-large"></i>
+            </div>
+
+            <div class="temperature-wrapper">
+              <p class="current-temp">0°C</p>
+            </div>
+          </div>
+          <ul class="card-details">
+            <li>
+              <i class="wi wi-raindrops"></i>
+              <span id="card-0-precip">0%</span>
+            </li>
+            <li>
+              <i class="wi wi-windy"></i>
+              <span id="card-0-wind">0mph</span>
+            </li>
+            <li>
+              <i class="wi wi-humidity"></i>
+              <span id="card-0-humidity">0%</span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="card main-card middle-top-card ">
+        <div class="card-header" id="card-1-date">&nbsp;</div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="icon-wrapper">
+              <i id="card-1-icon" class="wi wi-day-cloudy icon-large"></i>
+            </div>
+            <div class="temperature-wrapper">
+              <div class="high-low">
+                <div>
+                  <i class="wi wi-thermometer temp-icon"></i>
+                </div>
+                <div>
+                  <p class="temp-low" id="card-1-temp-high">0°C</p>
+                </div>
+              </div>
+              <div class="high-low">
+                <div>
+                  <i class="wi wi-thermometer-exterior temp-icon"></i>
+                </div>
+                <div>
+                  <p class="temp-low" id="card-1-temp-low">0°C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="card-details">
+            <li>
+              <i class="wi wi-raindrops"></i>
+              <span id="card-1-precip">0%</span>
+            </li>
+            <li>
+              <i class="wi wi-windy"></i>
+              <span id="card-1-wind">0mph</span>
+            </li>
+            <li>
+              <i class="wi wi-humidity"></i>
+              <span id="card-1-humidity">0%</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card main-card ">
+        <div class="card-header" id="card-2-date">&nbsp;</div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="icon-wrapper">
+              <i id="card-2-icon" class="wi wi-night-clear icon-large"></i>
+            </div>
+            <div class="temperature-wrapper">
+              <div class="high-low">
+                <div>
+                  <i class="wi wi-thermometer  temp-icon"></i>
+                </div>
+                <div>
+                  <p class="temp-low" id="card-2-temp-high">0°C</p>
+                </div>
+              </div>
+              <div class="high-low">
+                <div>
+                  <i class="wi wi-thermometer-exterior temp-icon"></i>
+                </div>
+                <div>
+                  <p class="temp-low" id="card-2-temp-low">0°C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="card-details">
+            <li>
+              <i class="wi wi-raindrops"></i>
+              <span id="card-2-precip">0%</span>
+            </li>
+            <li>
+              <i class="wi wi-windy"></i>
+              <span id="card-2-wind">0mph</span>
+            </li>
+            <li>
+              <i class="wi wi-humidity"></i>
+              <span id="card-2-humidity">0%</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card main-card ">
+        <div class="card-header" id="card-3-date">&nbsp;</div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="icon-wrapper">
+              <i id="card-3-icon" class="wi wi-night-cloudy icon-large"></i>
+            </div>
+
+            <div class="temperature-wrapper">
+              <div class="high-low">
+                <div>
+                  <i class="wi wi-thermometer  temp-icon"></i>
+                </div>
+                <div>
+                  <p class="temp-low" id="card-3-temp-high">0°C</p>
+                </div>
+              </div>
+              <div class="high-low">
+                <div>
+                  <i class="wi wi-thermometer-exterior temp-icon"></i>
+                </div>
+                <div>
+                  <p class="temp-low" id="card-3-temp-low">0°C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="card-details">
+            <li>
+              <i class="wi wi-raindrops"></i>
+              <span id="card-3-precip">0%</span>
+            </li>
+            <li>
+              <i class="wi wi-windy"></i>
+              <span id="card-3-wind">0mph</span>
+            </li>
+            <li>
+              <i class="wi wi-humidity"></i>
+              <span id="card-3-humidity">0%</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card main-card middle-bottom-card ">
+        <div class="card-header" id="card-4-date">&nbsp;</div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="icon-wrapper">
+              <i id="card-4-icon" class="wi wi-fog icon-large"></i>
+            </div>
+
+            <div class="temperature-wrapper">
+              <div class="high-low">
+                <div>
+                  <i class="wi wi-thermometer  temp-icon"></i>
+                </div>
+                <div>
+                  <p class="temp-low" id="card-4-temp-high">0°C</p>
+                </div>
+              </div>
+              <div class="high-low">
+                <div>
+                  <i class="wi wi-thermometer-exterior temp-icon"></i>
+                </div>
+                <div>
+                  <p class="temp-low" id="card-4-temp-low">0°C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="card-details">
+            <li>
+              <i class="wi wi-raindrops"></i>
+              <span id="card-4-precip">0%</span>
+            </li>
+            <li>
+              <i class="wi wi-windy"></i>
+              <span id="card-4-wind">0mph</span>
+            </li>
+            <li>
+              <i class="wi wi-humidity"></i>
+              <span id="card-4-humidity">0%</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card main-card ">
+        <div class="card-header" id="card-5-date">&nbsp;</div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="icon-wrapper">
+              <i id="card-5-icon" class="wi wi-snow icon-large"></i>
+            </div>
+
+            <div class="temperature-wrapper">
+              <div class="high-low">
+                <div>
+                  <i class="wi wi-thermometer  temp-icon"></i>
+                </div>
+                <div>
+                  <p class="temp-low" id="card-5-temp-high">0°C</p>
+                </div>
+              </div>
+              <div class="high-low">
+                <div>
+                  <i class="wi wi-thermometer-exterior temp-icon"></i>
+                </div>
+                <div>
+                  <p class="temp-low" id="card-5-temp-low">0°C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="card-details">
+            <li>
+              <i class="wi wi-raindrops"></i>
+              <span id="card-5-precip">0%</span>
+            </li>
+            <li>
+              <i class="wi wi-windy"></i>
+              <span id="card-5-wind">0mph</span>
+            </li>
+            <li>
+              <i class="wi wi-humidity"></i>
+              <span id="card-5-humidity">0%</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+
+
+
+
+
+
+
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
